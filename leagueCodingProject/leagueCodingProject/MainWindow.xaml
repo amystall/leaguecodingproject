@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBox x:Name="txbRedjungle" HorizontalAlignment="Left" Height="23" Margin="467,227,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbJungleblue" HorizontalAlignment="Left" Height="23" Margin="92,196,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbBluesupport" HorizontalAlignment="Left" Height="23" Margin="432,371,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbRedSupport" HorizontalAlignment="Left" Height="23" Margin="644,219,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbBlueADC" HorizontalAlignment="Left" Height="23" Margin="565,344,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbRedADC" HorizontalAlignment="Left" Height="23" Margin="611,289,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbMidred" HorizontalAlignment="Left" Height="23" Margin="355,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbMidblue" HorizontalAlignment="Left" Height="23" Margin="223,264,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbTopred" HorizontalAlignment="Left" Height="23" Margin="127,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbTopblue" HorizontalAlignment="Left" Height="23" Margin="45,113,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnCalculate" Content="Calculate Odds" HorizontalAlignment="Left" Margin="92,344,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="BtnCalculate_Click"/>
+
     </Grid>
 </Window>

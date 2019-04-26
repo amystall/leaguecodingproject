@@ -24,5 +24,16 @@ namespace leagueCodingProject
         {
             InitializeComponent();
         }
+
+        private void BtnCalculate_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        //this can probably be changed to a double but I don't want to deal with the red line right now
+        public void CalculateWinRate()
+        {
+            
+        }
     }
 }
