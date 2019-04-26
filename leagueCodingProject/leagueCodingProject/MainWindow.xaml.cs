@@ -47,9 +47,39 @@ namespace leagueCodingProject
                     IEnumberable<matchlistByDivision> matchlist = JsonConvert.DeserializeObject<matchlistByDivision>(content);
                     //assume amy pulls through and gives me a sweet sweet list
 
+                    //consider using a for loop which is within the rate limits
                     foreach(var item in /*amys list*/)
                     {
+                        //make sure to fix the item. in this query sense we dont know what it is yet
+                        //RATE LIMITS
+                        var response2 = client.GetAsync($@"https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/{item.name}?api_key=RGAPI-fc04a15c-8c7f-4294-9010-b971c873f2eb").Result;
+                        if (response2.IsSuccessStatusCode)
+                        {
+                            var content2 = response2.Content.ReadAsStringAsync().Result;
+                            //put into list part
 
+                        }
+                    }
+                    foreach (var item in /*second list*/)
+                    {
+                        //make sure to fix the item.
+                        var response3 = client.GetAsync($@"https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/{item.accountid}?api_key=RGAPI-fc04a15c-8c7f-4294-9010-b971c873f2eb").Result;
+                        if(response3.IsSuccessStatusCode)
+                        {
+                            var content3 = response3.Content.ReadAsStringAsync().Result;
+                            //put into list part
+                        }
+                    }
+                    
+                    foreach (var item in /*third list*/)
+                    {
+                        //make sure to fix the item in here
+                        var response4 = client.GetAsync($@"https://na1.api.riotgames.com/lol/match/v4/matches/{item.matchid}").Result;
+                        if (response4.IsSuccessStatusCode)
+                        {
+
+                        }
+                         
                     }
 
 
