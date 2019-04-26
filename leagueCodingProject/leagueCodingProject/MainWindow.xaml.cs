@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -37,10 +38,22 @@ namespace leagueCodingProject
             string apikey = "RGAPI-a008e059-1e17-4290-ac49-758f3ccc306f";
             using (HttpClient client = new HttpClient())
             {
-                var response = client.GetAsync($@"https://na1.api.riotgames.com/lol/league/v4/entries/RANKED_SOLO_5x5/DIAMOND/I?api_key=RGAPI-a008e059-1e17-4290-ac49-758f3ccc306f").Result;
+                var response = client.GetAsync($@"https://na1.api.riotgames.com/lol/league/v4/entries/RANKED_SOLO_5x5/DIAMOND/I?api_key=RGAPI-fc04a15c-8c7f-4294-9010-b971c873f2eb").Result;
                 if (response.IsSuccessStatusCode)
                 {
+                    List<matchlistByDivision> matchlistd = new List<matchlistByDivision>();
+                    
+                    var content = response.Content.ReadAsStringAsync().Result;
+                    IEnumberable<matchlistByDivision> matchlist = JsonConvert.DeserializeObject<matchlistByDivision>(content);
+                    //assume amy pulls through and gives me a sweet sweet list
 
+                    foreach(var item in /*amys list*/)
+                    {
+
+                    }
+
+
+                    
                 }
             }
         }
