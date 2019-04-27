@@ -21,5 +21,6 @@ namespace leagueCodingProject
         public string tier { get; set; }
         public string summonerId { get; set; }
         public int leaguePoints { get; set; }
+        public MiniSeries miniSeries { get; set; }
     }
 }

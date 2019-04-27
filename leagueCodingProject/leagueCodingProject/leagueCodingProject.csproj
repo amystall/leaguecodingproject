@@ -60,6 +60,7 @@
     </ApplicationDefinition>
     <Compile Include="matchlistByDivision.cs" />
     <Compile Include="matchlistByPlayer.cs" />
+    <Compile Include="MiniSeries.cs" />
     <Compile Include="summonerName.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
