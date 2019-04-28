@@ -266,6 +266,7 @@ namespace leagueCodingProject
                     {
                         var content = response.Content.ReadAsStringAsync().Result;
                         champtionMastery playermastery = JsonConvert.DeserializeObject<champtionMastery>(content);
+                        THIS
 
                     }
                 }
