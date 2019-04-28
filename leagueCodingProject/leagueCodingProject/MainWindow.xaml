@@ -35,7 +35,7 @@
         <TextBox x:Name="txbRedADCPlayer" HorizontalAlignment="Left" Height="23" Margin="747.8,440,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txbRedSupportPlayer" HorizontalAlignment="Left" Height="23" Margin="712.8,348,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txbMidredPlayer" HorizontalAlignment="Left" Height="23" Margin="535.8,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbRedjungle_Copy" HorizontalAlignment="Left" Height="23" Margin="535.8,433,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbRedjunglePlayer" HorizontalAlignment="Left" Height="23" Margin="535.8,433,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txtResults" HorizontalAlignment="Left" Height="95" Margin="401.8,267,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160" Grid.Column="1" RenderTransformOrigin="-0.28,-0.88"/>
 
     </Grid>
