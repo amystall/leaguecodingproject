@@ -5,19 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:leagueCodingProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBox x:Name="txbRedjungle" HorizontalAlignment="Left" Height="23" Margin="467,227,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txbJungleblue" HorizontalAlignment="Left" Height="23" Margin="92,196,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txbBluesupport" HorizontalAlignment="Left" Height="23" Margin="432,371,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txbRedSupport" HorizontalAlignment="Left" Height="23" Margin="644,219,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txbBlueADC" HorizontalAlignment="Left" Height="23" Margin="565,344,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txbRedADC" HorizontalAlignment="Left" Height="23" Margin="611,289,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txbMidred" HorizontalAlignment="Left" Height="23" Margin="355,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txbMidblue" HorizontalAlignment="Left" Height="23" Margin="223,264,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txbTopred" HorizontalAlignment="Left" Height="23" Margin="127,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txbTopblue" HorizontalAlignment="Left" Height="23" Margin="45,113,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnCalculate" Content="Calculate Odds" HorizontalAlignment="Left" Margin="92,344,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="BtnCalculate_Click"/>
+        Title="MainWindow" Height="675" Width="1200">
+    <Grid x:Name="backgroundImg">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="119*"/>
+            <ColumnDefinition Width="1056*"/>
+            <ColumnDefinition Width="18*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="https://oyster.ignimgs.com/mediawiki/apis.ign.com/league-of-legends/6/65/Summoners_rift_season_4_map-820x420.jpg?width=640"/>
+        </Grid.Background>
+        <TextBox x:Name="txbRedjungle" HorizontalAlignment="Left" Height="23" Margin="563.8,456,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbJungleblue" HorizontalAlignment="Left" Height="23" Margin="276.8,239,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbBluesupport" HorizontalAlignment="Left" Height="23" Margin="498.8,585,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbRedSupport" HorizontalAlignment="Left" Height="23" Margin="712.8,376,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbBlueADC" HorizontalAlignment="Left" Height="23" Margin="646.8,557,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbRedADC" HorizontalAlignment="Left" Height="23" Margin="747.8,467,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbMidred" HorizontalAlignment="Left" Height="23" Margin="535.8,225,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbMidblue" HorizontalAlignment="Left" Height="23" Margin="310.8,419,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbTopred" HorizontalAlignment="Left" Height="23" Margin="201.8,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbTopblue" HorizontalAlignment="Left" Height="23" Margin="98.8,122,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Button x:Name="btnCalculate" Content="Calculate Odds" HorizontalAlignment="Left" Margin="119,440,0,0" VerticalAlignment="Top" Width="142" Height="50" Click="BtnCalculate_Click" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txbTopredPlayer" HorizontalAlignment="Left" Height="23" Margin="201.8,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbTopbluePlayer" HorizontalAlignment="Left" Height="23" Margin="98.8,150,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbJunglebluePlayer" HorizontalAlignment="Left" Height="23" Margin="276.8,267,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbMidbluePlayer" HorizontalAlignment="Left" Height="23" Margin="310.8,447,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbBluesupportPlayer" HorizontalAlignment="Left" Height="23" Margin="498.8,613,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbBlueADCPlayer" HorizontalAlignment="Left" Height="23" Margin="646.8,585,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbRedADCPlayer" HorizontalAlignment="Left" Height="23" Margin="747.8,440,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbRedSupportPlayer" HorizontalAlignment="Left" Height="23" Margin="712.8,348,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbMidredPlayer" HorizontalAlignment="Left" Height="23" Margin="535.8,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbRedjungle_Copy" HorizontalAlignment="Left" Height="23" Margin="535.8,433,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txtResults" HorizontalAlignment="Left" Height="95" Margin="401.8,267,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160" Grid.Column="1" RenderTransformOrigin="-0.28,-0.88"/>
 
     </Grid>
 </Window>

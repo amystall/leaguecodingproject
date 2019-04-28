@@ -58,9 +58,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="champtionMastery.cs" />
     <Compile Include="matchlistByDivision.cs" />
     <Compile Include="matchlistByPlayer.cs" />
     <Compile Include="MiniSeries.cs" />
+    <Compile Include="playerLeague.cs" />
     <Compile Include="summonerName.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
