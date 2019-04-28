@@ -31,7 +31,56 @@ namespace leagueCodingProject
 
         private void BtnCalculate_Click(object sender, RoutedEventArgs e)
         {
-            CalculateWinRate();
+            //variable creation
+            //players
+            string topblueplayer = txbTopblue.Text;
+            string midblueplayer = txbMidblue.Text;
+            string jungleblueplayer = txbJungleblue.Text;
+            string adcblueplayer = txbBlueADC.Text;
+            string supportblueplayer = txbBluesupport.Text;
+            string topredplayer = txbTopred.Text;
+            string midredplayer = txbMidred.Text;
+            string jungleredplayer = txbRedjungle.Text;
+            string adcredplayer = txbRedADC.Text;
+            string supportredplayer = txbRedSupport.Text;
+
+            //characters
+            string bluetopcharacter = txb
+            string bluemidcharacter = txb
+            string bluejgcharacter = txb
+            string blueadccharacter = txb
+            string bluesupportcharacter = txb
+            string 
+            string 
+            string 
+            string 
+            string 
+
+            List<string> players = new List<string>();
+            players.Add(topblueplayer);
+            players.Add(midblueplayer);
+            players.Add(jungleblueplayer);
+            players.Add(adcblueplayer);
+            players.Add(supportblueplayer);
+            players.Add(topredplayer);
+            players.Add(midredplayer);
+            players.Add(jungleredplayer);
+            players.Add(adcredplayer);
+            players.Add(supportredplayer);
+
+            List<string> characters = new List<string>();
+            characters.Add(
+            characters.Add(
+            characters.Add(
+            characters.Add(
+            characters.Add(
+            characters.Add(
+            characters.Add(
+            characters.Add(
+            characters.Add(
+            characters.Add(
+            //getting player ID's
+
         }
 
 
