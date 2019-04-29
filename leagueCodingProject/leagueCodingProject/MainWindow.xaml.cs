@@ -27,14 +27,14 @@ namespace leagueCodingProject
         public MainWindow()
         {
             InitializeComponent();
-            
+            txtResults.Visibility = Visibility.Hidden;
 
         }
 
         private void BtnCalculate_Click(object sender, RoutedEventArgs e)
         {
             //Tim you need to replace this API key when you run this program with the regenerated one. Text me or I can include the instructions.
-            string apikey = "RGAPI-a2ab5587-dfed-43f8-a906-357d6ab0baf5";
+            string apikey = "RGAPI-6af2050a-d9f2-49fc-8861-483dd6f64894";
             //variable creation
             Dictionary<string, int> champions = new Dictionary<string, int>();
             champions.Add("Aatrox", 1);
@@ -242,9 +242,33 @@ namespace leagueCodingProject
             playerCharacter.Add(redadcplayer, adcredcharacter);
             playerCharacter.Add(redsupportplayer, supportredcharacter);
 
+            string iron = "IRON";
+            string bronze = "BRONZE";
+            string silver = "SILVER";
+            string gold = "GOLD";
+            string platinum = "PLATINUM";
+            string diamond = "DIAMOND";
+            string master = "MASTER";
+            string grandmaster = "GRANDMASTER";
+            string challenger = "CHALLERNGER";
+
+            Dictionary<string, int> leaguepoints = new Dictionary<string, int>();
+            leaguepoints.Add(iron, 1);
+            leaguepoints.Add(bronze, 2);
+            leaguepoints.Add(silver, 3);
+            leaguepoints.Add(gold, 4);
+            leaguepoints.Add(platinum, 5);
+            leaguepoints.Add(diamond, 6);
+            leaguepoints.Add(master, 7);
+            leaguepoints.Add(grandmaster, 8);
+            leaguepoints.Add(challenger, 9);
+
+            
+
 
             List<summonerName> summonerNames = new List<summonerName>();
-
+            List<champtionMastery> playermasterys = new List<champtionMastery>();
+            List<playerLeague> playersleagues = new List<playerLeague>();
             using (HttpClient client = new HttpClient())
             {
                 foreach (var item in playerCharacter)
@@ -256,23 +280,72 @@ namespace leagueCodingProject
                         summonerName summoner = JsonConvert.DeserializeObject<summonerName>(content);
                         summonerNames.Add(summoner);
                     }
+                    else
+                    {
+                        MessageBox.Show($"You have made an error in {item.Key} or the service is down.");
+                        goto exit;
+                    }
                 }
 
                 foreach (summonerName item in summonerNames)
                 {
- 
-                    var response = client.GetAsync($@"https://na1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/{item.id}/by-champion/{playerCharacter[item.name]}").Result;
+                    int championint = champions[$"{playerCharacter[item.name]}"];
+                    
+
+                    var response = client.GetAsync($@"https://na1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/{item.id}/by-champion/{championint}?api_key={apikey}").Result;
                     if (response.IsSuccessStatusCode)
                     {
                         var content = response.Content.ReadAsStringAsync().Result;
                         champtionMastery playermastery = JsonConvert.DeserializeObject<champtionMastery>(content);
-                        THIS
+                        playermasterys.Add(playermastery);
 
                     }
+                    else
+                    {
+                        MessageBox.Show($"You have made an error in the champion {item.name} is playing or the service is down.");
+                    }
+
+                    response = client.GetAsync($@"https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/{item.id}?api_key={apikey}").Result;
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var content = response.Content.ReadAsStringAsync().Result;
+                        content = content.Replace("[", "");
+                        content = content.Replace("]", "");
+                        playerLeague playersleague = JsonConvert.DeserializeObject<playerLeague>(content);
+                        playersleagues.Add(playersleague);
+                    }
+                }
+                
+            }
+
+            int blueteamschampionmastery = 0;
+            int redteamschampionmastery = 0;
+            foreach (var item in playermasterys)
+            {
+                int counter = 1;
+                if (counter == 1 || counter == 2 || counter == 3 || counter == 5 || counter == 4)
+                {
+                    blueteamschampionmastery = blueteamschampionmastery + item.championPoints;
+                    counter++;
+                }
+                else
+                {
+                    redteamschampionmastery = redteamschampionmastery + item.championPoints;
                 }
             }
-            
 
+            if (blueteamschampionmastery > redteamschampionmastery)
+            {
+                txtResults.Text = "BLUE TEAM WINS";
+            }
+            else
+            {
+                txtResults.Text = "PURPLE TEAM WINS";
+            }
+
+
+            txtResults.Visibility = Visibility.Visible;
+        exit:;
         }
 
 
