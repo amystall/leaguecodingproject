@@ -197,7 +197,7 @@ namespace leagueCodingProject
             string bluetopplayer = txbTopbluePlayer.Text;
             string bluemidplayer = txbMidbluePlayer.Text;
             string bluejgplayer = txbJunglebluePlayer.Text;
-            string blueadcplayer = txbBlueADC.Text;
+            string blueadcplayer = txbBlueADCPlayer.Text;
             string bluesupportplayer = txbBluesupportPlayer.Text;
             string redtopplayer = txbTopredPlayer.Text;
             string redmidplayer = txbMidredPlayer.Text;
@@ -310,7 +310,7 @@ namespace leagueCodingProject
                     {
                         var content = response.Content.ReadAsStringAsync().Result;
                         content = content.Replace("[", "");
-                        content = content.Replace("]", "");
+                        //content = content.Replace("]", "");
                         playerLeague playersleague = JsonConvert.DeserializeObject<playerLeague>(content);
                         playersleagues.Add(playersleague);
                     }
@@ -446,6 +446,7 @@ namespace leagueCodingProject
                     }
                 }
             }
-        }
+
+    }
     }
 
