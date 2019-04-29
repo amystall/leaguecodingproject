@@ -309,9 +309,10 @@ namespace leagueCodingProject
                     if (response.IsSuccessStatusCode)
                     {
                         var content = response.Content.ReadAsStringAsync().Result;
-                        content = content.Replace("[", "");
-                        //content = content.Replace("]", "");
-                        playerLeague playersleague = JsonConvert.DeserializeObject<playerLeague>(content);
+                        string[] splitleague = content.Split('}');
+                        splitleague[0] = splitleague[0] + '}';
+                        splitleague[0] = splitleague[0].Replace("[",null);
+                        playerLeague playersleague = JsonConvert.DeserializeObject<playerLeague>(splitleague[0]);
                         playersleagues.Add(playersleague);
                     }
                 }

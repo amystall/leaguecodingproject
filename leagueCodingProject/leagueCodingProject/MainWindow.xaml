@@ -20,7 +20,7 @@
         <TextBox x:Name="txbBluesupport" HorizontalAlignment="Left" Height="23" Margin="498.8,585,0,0" TextWrapping="Wrap" Text="Leona" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txbRedSupport" HorizontalAlignment="Left" Height="23" Margin="712.8,376,0,0" TextWrapping="Wrap" Text="Alistar" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txbBlueADC" HorizontalAlignment="Left" Height="23" Margin="646.8,557,0,0" TextWrapping="Wrap" Text="Ashe" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbRedADC" HorizontalAlignment="Left" Height="23" Margin="741.8,442,0,0" TextWrapping="Wrap" Text="Exreal" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbRedADC" HorizontalAlignment="Left" Height="23" Margin="741.8,442,0,0" TextWrapping="Wrap" Text="Ezreal" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txbMidred" HorizontalAlignment="Left" Height="23" Margin="535.8,225,0,0" TextWrapping="Wrap" Text="Ekko" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txbMidblue" HorizontalAlignment="Left" Height="23" Margin="310.8,419,0,0" TextWrapping="Wrap" Text="Diana" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txbTopred" HorizontalAlignment="Left" Height="23" Margin="201.8,38,0,0" TextWrapping="Wrap" Text="Aatrox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
@@ -36,7 +36,7 @@
         <TextBox x:Name="txbMidredPlayer" HorizontalAlignment="Left" Height="23" Margin="535.8,190,0,0" TextWrapping="Wrap" Text="Itsue" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txbRedjunglePlayer" HorizontalAlignment="Left" Height="23" Margin="535.8,484,0,0" TextWrapping="Wrap" Text="Xtimate1" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txtResults" HorizontalAlignment="Left" Height="95" Margin="401.8,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Grid.Column="1" RenderTransformOrigin="-0.28,-0.88"/>
-        <TextBox x:Name="txbTopbluePlayer" HorizontalAlignment="Left" Height="23" Margin="98.8,150,0,0" TextWrapping="Wrap" Text="Minju3" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbTopbluePlayer" HorizontalAlignment="Left" Height="23" Margin="98.8,150,0,0" TextWrapping="Wrap" Text="Swollwonder" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
 
     </Grid>
 </Window>
