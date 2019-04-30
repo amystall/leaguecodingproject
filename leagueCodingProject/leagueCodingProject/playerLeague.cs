@@ -21,5 +21,6 @@ namespace leagueCodingProject
         public bool inactive { get; set; }
         public bool freshBlood { get; set; }
         public bool hotStreak { get; set; }
+        public MiniSeries miniSeries { get; set; }
     }
 }

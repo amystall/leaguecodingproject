@@ -15,28 +15,28 @@
         <Grid.Background>
             <ImageBrush ImageSource="https://oyster.ignimgs.com/mediawiki/apis.ign.com/league-of-legends/6/65/Summoners_rift_season_4_map-820x420.jpg?width=640"/>
         </Grid.Background>
-        <TextBox x:Name="txbRedjungle" HorizontalAlignment="Left" Height="23" Margin="563.8,456,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Text="Camille"/>
-        <TextBox x:Name="txbJungleblue" HorizontalAlignment="Left" Height="23" Margin="276.8,239,0,0" TextWrapping="Wrap" Text="Amumu" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbBluesupport" HorizontalAlignment="Left" Height="23" Margin="498.8,585,0,0" TextWrapping="Wrap" Text="Leona" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbRedSupport" HorizontalAlignment="Left" Height="23" Margin="712.8,376,0,0" TextWrapping="Wrap" Text="Alistar" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbBlueADC" HorizontalAlignment="Left" Height="23" Margin="646.8,557,0,0" TextWrapping="Wrap" Text="Ashe" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbRedADC" HorizontalAlignment="Left" Height="23" Margin="741.8,442,0,0" TextWrapping="Wrap" Text="Ezreal" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbMidred" HorizontalAlignment="Left" Height="23" Margin="535.8,225,0,0" TextWrapping="Wrap" Text="Ekko" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbMidblue" HorizontalAlignment="Left" Height="23" Margin="310.8,419,0,0" TextWrapping="Wrap" Text="Diana" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbTopred" HorizontalAlignment="Left" Height="23" Margin="201.8,38,0,0" TextWrapping="Wrap" Text="Aatrox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbTopblue" HorizontalAlignment="Left" Height="23" Margin="98.8,122,0,0" TextWrapping="Wrap" Text="Jayce" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbRedjungle" HorizontalAlignment="Left" Height="23" Margin="563.8,456,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Text="Kai'Sa"/>
+        <TextBox x:Name="txbJungleblue" HorizontalAlignment="Left" Height="23" Margin="276.8,239,0,0" TextWrapping="Wrap" Text="Kayn" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbBluesupport" HorizontalAlignment="Left" Height="23" Margin="498.8,585,0,0" TextWrapping="Wrap" Text="Lux" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbRedSupport" HorizontalAlignment="Left" Height="23" Margin="712.8,376,0,0" TextWrapping="Wrap" Text="Lee Sin" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbBlueADC" HorizontalAlignment="Left" Height="23" Margin="646.8,557,0,0" TextWrapping="Wrap" Text="Kai'Sa" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbRedADC" HorizontalAlignment="Left" Height="23" Margin="741.8,442,0,0" TextWrapping="Wrap" Text="Draven" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbMidred" HorizontalAlignment="Left" Height="23" Margin="535.8,225,0,0" TextWrapping="Wrap" Text="Yasuo" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbMidblue" HorizontalAlignment="Left" Height="23" Margin="310.8,419,0,0" TextWrapping="Wrap" Text="Azir" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbTopred" HorizontalAlignment="Left" Height="23" Margin="201.8,38,0,0" TextWrapping="Wrap" Text="Amumu" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbTopblue" HorizontalAlignment="Left" Height="23" Margin="98.8,122,0,0" TextWrapping="Wrap" Text="Teemo" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <Button x:Name="btnCalculate" Content="Calculate Odds" HorizontalAlignment="Left" Margin="119,440,0,0" VerticalAlignment="Top" Width="142" Height="50" Click="BtnCalculate_Click" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="txbTopredPlayer" HorizontalAlignment="Left" Height="23" Margin="201.8,10,0,0" TextWrapping="Wrap" Text="Eârthquake" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbJunglebluePlayer" HorizontalAlignment="Left" Height="23" Margin="276.8,267,0,0" TextWrapping="Wrap" Text="TAEYEON VOICE" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbMidbluePlayer" HorizontalAlignment="Left" Height="23" Margin="310.8,447,0,0" TextWrapping="Wrap" Text="cEuEnoch" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbBluesupportPlayer" HorizontalAlignment="Left" Height="23" Margin="498.8,613,0,0" TextWrapping="Wrap" Text="4 A 8" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbBlueADCPlayer" HorizontalAlignment="Left" Height="23" Margin="646.8,585,0,0" TextWrapping="Wrap" Text="Mikosuki" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbRedADCPlayer" HorizontalAlignment="Left" Height="23" Margin="712.8,470,0,0" TextWrapping="Wrap" Text="Piray" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbRedSupportPlayer" HorizontalAlignment="Left" Height="23" Margin="712.8,348,0,0" TextWrapping="Wrap" Text="blue revolvo" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbMidredPlayer" HorizontalAlignment="Left" Height="23" Margin="535.8,190,0,0" TextWrapping="Wrap" Text="Itsue" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txbRedjunglePlayer" HorizontalAlignment="Left" Height="23" Margin="535.8,484,0,0" TextWrapping="Wrap" Text="Xtimate1" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbTopredPlayer" HorizontalAlignment="Left" Height="23" Margin="201.8,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Text="binzhouda"/>
+        <TextBox x:Name="txbJunglebluePlayer" HorizontalAlignment="Left" Height="23" Margin="276.8,267,0,0" TextWrapping="Wrap" Text="twin watcher" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbMidbluePlayer" HorizontalAlignment="Left" Height="23" Margin="310.8,447,0,0" TextWrapping="Wrap" Text="Swollwonder" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbBluesupportPlayer" HorizontalAlignment="Left" Height="23" Margin="498.8,613,0,0" TextWrapping="Wrap" Text="FrozenSkittles" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbBlueADCPlayer" HorizontalAlignment="Left" Height="23" Margin="646.8,585,0,0" TextWrapping="Wrap" Text="Craigles73" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbRedADCPlayer" HorizontalAlignment="Left" Height="23" Margin="712.8,470,0,0" TextWrapping="Wrap" Text="Tuffnpuff" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbRedSupportPlayer" HorizontalAlignment="Left" Height="23" Margin="712.8,348,0,0" TextWrapping="Wrap" Text="XanthusBN" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbMidredPlayer" HorizontalAlignment="Left" Height="23" Margin="535.8,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Text="Irrational24"/>
+        <TextBox x:Name="txbRedjunglePlayer" HorizontalAlignment="Left" Height="23" Margin="535.8,484,0,0" TextWrapping="Wrap" Text="Lil Swish" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txtResults" HorizontalAlignment="Left" Height="95" Margin="401.8,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Grid.Column="1" RenderTransformOrigin="-0.28,-0.88"/>
-        <TextBox x:Name="txbTopbluePlayer" HorizontalAlignment="Left" Height="23" Margin="98.8,150,0,0" TextWrapping="Wrap" Text="Swollwonder" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txbTopbluePlayer" HorizontalAlignment="Left" Height="23" Margin="98.8,150,0,0" TextWrapping="Wrap" Text="Scarlett Nemesis" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
 
     </Grid>
 </Window>

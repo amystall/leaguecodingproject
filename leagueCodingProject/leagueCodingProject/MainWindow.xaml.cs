@@ -34,7 +34,8 @@ namespace leagueCodingProject
         private void BtnCalculate_Click(object sender, RoutedEventArgs e)
         {
             //Tim you need to replace this API key when you run this program with the regenerated one. Text me or I can include the instructions.
-            string apikey = "RGAPI-6af2050a-d9f2-49fc-8861-483dd6f64894";
+            //lucian doesnt work for some reason...
+            string apikey = "RGAPI-36fcbd29-6cbe-4887-a9af-a204753a37b4";
             //variable creation
             Dictionary<string, int> champions = new Dictionary<string, int>();
             champions.Add("Aatrox", 1);
@@ -250,7 +251,8 @@ namespace leagueCodingProject
             string diamond = "DIAMOND";
             string master = "MASTER";
             string grandmaster = "GRANDMASTER";
-            string challenger = "CHALLERNGER";
+            string challenger = "CHALLENGER";
+            string unranked = "UNRANKED";
 
             Dictionary<string, int> leaguepoints = new Dictionary<string, int>();
             leaguepoints.Add(iron, 1);
@@ -262,6 +264,7 @@ namespace leagueCodingProject
             leaguepoints.Add(master, 7);
             leaguepoints.Add(grandmaster, 8);
             leaguepoints.Add(challenger, 9);
+            leaguepoints.Add(unranked, 3);
 
             
 
@@ -269,6 +272,7 @@ namespace leagueCodingProject
             List<summonerName> summonerNames = new List<summonerName>();
             List<champtionMastery> playermasterys = new List<champtionMastery>();
             List<playerLeague> playersleagues = new List<playerLeague>();
+            Dictionary<string, string> playersleaguesactual = new Dictionary<string, string>();
             using (HttpClient client = new HttpClient())
             {
                 foreach (var item in playerCharacter)
@@ -287,11 +291,14 @@ namespace leagueCodingProject
                     }
                 }
 
+                int count = 0;
                 foreach (summonerName item in summonerNames)
                 {
+                    //if you hit an error here you have messed up the case sensitiviy of a username
                     int championint = champions[$"{playerCharacter[item.name]}"];
                     
-
+                    
+                    string skipflex = "";
                     var response = client.GetAsync($@"https://na1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/{item.id}/by-champion/{championint}?api_key={apikey}").Result;
                     if (response.IsSuccessStatusCode)
                     {
@@ -304,38 +311,81 @@ namespace leagueCodingProject
                     {
                         MessageBox.Show($"You have made an error in the champion {item.name} is playing or the service is down.");
                     }
-
-                    response = client.GetAsync($@"https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/{item.id}?api_key={apikey}").Result;
-                    if (response.IsSuccessStatusCode)
+                    if (skipflex == item.id)
                     {
-                        var content = response.Content.ReadAsStringAsync().Result;
-                        string[] splitleague = content.Split('}');
-                        splitleague[0] = splitleague[0] + '}';
-                        splitleague[0] = splitleague[0].Replace("[",null);
-                        playerLeague playersleague = JsonConvert.DeserializeObject<playerLeague>(splitleague[0]);
-                        playersleagues.Add(playersleague);
+
                     }
+                    else
+                    {
+                        response = client.GetAsync($@"https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/{item.id}?api_key={apikey}").Result;
+                        if (response.IsSuccessStatusCode)
+                        {
+                            var content = response.Content.ReadAsStringAsync().Result;
+                            if (content == "[]")
+                            {
+                                playerLeague playersleague = new playerLeague();
+                                playersleague.leagueId = null;
+                                playersleague.queueType = null;
+                                playersleague.tier = "UNRANKED";
+                                playersleague.rank = null;
+                                playersleague.summonerId = null;
+                                playersleague.summonerName = players[count];
+                                playersleague.leaguePoints = 0;
+                                playersleague.wins = 0;
+                                playersleague.losses = 0;
+                                playersleague.veteran = false;
+                                playersleague.inactive = false;
+                                playersleague.freshBlood = false;
+                                playersleague.hotStreak = false;
+                                playersleagues.Add(playersleague);
+                            }
+                            else
+                            {
+                                playersleagues = JsonConvert.DeserializeObject<List<playerLeague>>(content);
+                                
+
+                            }
+                            foreach (var thing in playersleagues)
+                            {
+                                if (playersleaguesactual.ContainsKey(thing.summonerName))
+                                {
+
+                                }
+                                else
+                                {
+                                    playersleaguesactual.Add(thing.summonerName, thing.tier);
+                                }
+
+
+                            }
+
+                        }
+                    }
+                    skipflex = item.id;
+                    count++;
                 }
                 
             }
-
-            int blueteamschampionmastery = 0;
-            int redteamschampionmastery = 0;
+            int counter = 0;
+            double blueteamspoints = 0;
+            double redteamspoints = 0;
             foreach (var item in playermasterys)
             {
-                int counter = 1;
-                if (counter == 1 || counter == 2 || counter == 3 || counter == 5 || counter == 4)
+                string player = players[counter];
+                if (player == players[0] || player == players[1] || player == players[2] || player == players[3] || player == players[4])
                 {
-                    blueteamschampionmastery = blueteamschampionmastery + item.championPoints;
-                    counter++;
+                    blueteamspoints = blueteamspoints + item.championPoints * Math.Exp(leaguepoints[playersleaguesactual[player]]);
+                    
+                    
                 }
                 else
                 {
-                    redteamschampionmastery = redteamschampionmastery + item.championPoints;
+                    redteamspoints = redteamspoints + item.championPoints * Math.Exp(leaguepoints[playersleaguesactual[player]]);
                 }
+                counter++;
             }
 
-            if (blueteamschampionmastery > redteamschampionmastery)
+            if (blueteamspoints > redteamspoints)
             {
                 txtResults.Text = "BLUE TEAM WINS";
             }
